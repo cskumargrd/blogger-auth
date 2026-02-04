@@ -38,22 +38,25 @@
     }
 
     // 3. CSS Injection (Dono ke liye layout load karega)
+   // ... verification logic ke baad ...
     var css = `
-        /* Aapka important CSS yahan paste karein */
-        body { background-color: #f4f7f6; }
-        #${footerId} { 
-            display: inline-block !important; 
-            visibility: visible !important; 
-            opacity: 1 !important; 
-            color: #d32f2f; /* Trial mein highlight karne ke liye color */
-            text-decoration: none;
-        }
+        /* 1. Main Layout */
+        .main-wrapper { width: 1100px; margin: 0 auto; background: #fff; }
+        
+        /* 2. Header Style */
+        #header-inner { background: #2c3e50; color: #ffffff; padding: 20px; text-align: center; }
+        
+        /* 3. Footer Protection Style (Zaroori) */
+        #myFooterLink { color: #e74c3c !important; font-weight: bold !important; display: inline-block !important; }
+
+        /* 4. Fonts and Body */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; }
     `;
     
     var style = document.createElement('style');
     style.innerHTML = css;
     document.head.appendChild(style);
-
+    
 })();
 
 
