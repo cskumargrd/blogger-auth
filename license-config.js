@@ -7,8 +7,8 @@
 
     var currentDomain = window.location.hostname;
     var footerId = "myFooterLink"; // Aapke HTML mein anchor tag ki ID
-    var ownerLink = "https://your-site.com"; // Aapka selling link
-    var ownerName = "YourBrandName"; // Aapka brand name
+    var ownerLink = "https://kamalvasini.com/"; // Aapka selling link
+    var ownerName = "Kamalvasini"; // Aapka brand name
 
     // 2. Logic: Premium vs Trial
     var isPremium = authorizedDomains.indexOf(currentDomain) > -1;
