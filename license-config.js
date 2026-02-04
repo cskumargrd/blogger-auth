@@ -2,7 +2,7 @@
     // 1. PREMIUM DOMAINS LIST (Sirf domain name rakhein)
       var authorizedDomains = [
         "premium-user.com",
-        "client-blog.blogspot.com"
+        "chandrashekharkumartech.blogspot.com"
     ];
 
     var currentDomain = window.location.hostname;
