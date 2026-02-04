@@ -1,43 +1,44 @@
 (function() {
-    // 1. PREMIUM DOMAINS LIST (Sirf domain name rakhein)
-      var authorizedDomains = [
+    // 1. PREMIUM DOMAINS LIST
+    var authorizedDomains = [
         "premium-user.com",
         "chandrashekharkumartech.blogspot.com"
     ];
 
     var currentDomain = window.location.hostname;
     var footerId = "myFooterLink"; 
-    var ownerLink = "https://kamalvasini.com/"; 
+    var ownerLink = "https://kamalvasini.com/"; // Trial user yahan jayenge
     var ownerName = "Kamalvasini"; 
 
-    // 2. Premium vs Trial Logic
-    var isPremium = premiumDomains.indexOf(currentDomain) > -1;
+    // 2. Premium vs Trial Logic (Variable name fixed here)
+    var isPremium = authorizedDomains.indexOf(currentDomain) > -1;
     var footer = document.getElementById(footerId);
 
     if (isPremium) {
-        // PREMIUM: User ka domain name show hoga
+        // PREMIUM MODE
         if (footer) {
             footer.href = "https://" + currentDomain;
             footer.innerHTML = currentDomain;
         }
     } else {
-        // TRIAL: Aapka brand name show hoga
+        // TRIAL MODE
         if (footer) {
             footer.href = ownerLink;
             footer.innerHTML = ownerName;
         }
-        // Trial Protection (Ched-chad karne par redirect)
+        
+        // Trial Protection: Agar footer credits hataye to redirect
         setInterval(function() {
             var f = document.getElementById(footerId);
-            if (!f || f.getAttribute("href") !== ownerLink) {
-                document.body.innerHTML = "<h1 style='text-align:center;margin-top:20%;font-family:sans-serif;'>Template Protected: Restore Footer Credits to continue.</h1>";
-                setTimeout(function(){ window.location.href = ownerLink; }, 2000);
+            // Link ya Text badla to redirect
+            if (!f || f.getAttribute("href") !== ownerLink || f.innerHTML !== ownerName) {
+                document.body.innerHTML = "<div style='text-align:center;margin-top:20%;font-family:sans-serif;'><h1>Template Protected</h1><p>Please restore footer credits or purchase a license at kamalvasini.com</p></div>";
+                setTimeout(function(){ window.location.href = ownerLink; }, 3000);
             }
         }, 5000);
     }
 
     // 3. Critical CSS Injection
-    // NOTE: 'images/page.png' jaise path kaam nahi karenge. Inhe Full URL (http://...) se replace karein.
     var css = `
         #csk-main {
             background: #FFFFFF url('https://your-image-link.com/page.png') fixed !important;
@@ -65,6 +66,7 @@
             opacity: 1 !important;
             color: #FA8E00 !important;
             font-weight: bold !important;
+            text-decoration: none !important;
         }
     `;
     
