@@ -7,8 +7,8 @@
 
     var currentDomain = window.location.hostname;
     var footerId = "myFooterLink"; 
-    var ownerLink = "https://chandrashekharkumartech.blogspot.com/"; // Aapki site
-    var ownerName = "Chandra Shekhar Kumar"; 
+    var ownerLink = "https://kamalvasini.com/"; // Aapki site
+    var ownerName = "Kamalvasini"; 
 
     // 2. Premium vs Trial Logic
     var isPremium = premiumDomains.indexOf(currentDomain) > -1;
