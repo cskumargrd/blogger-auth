@@ -1,7 +1,7 @@
 (function() {
     // 1. PREMIUM DOMAINS LIST (Sirf domain name rakhein)
     var premiumDomains = [
-        "chandrashekharkumartech.blogspot.com", 
+        "chandrashekharkumart.blogspot.com", 
         "client-site.com"
     ];
 
