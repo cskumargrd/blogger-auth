@@ -36,12 +36,20 @@
 
     // 3. Critical CSS Injection (Template ka huliya control karne ke liye)
     var css = `
-        #csk-main { background: #FFFFFF !important; width: 100% !important; }
-        .csk-header { height: 250px !important; border-top: 5px solid #FA8E00 !important; }
-        .csk-nav { background: #292929 !important; border-bottom: 6px solid #FA8E00 !important; }
-        .csk-sheet { width: 90% !important; max-width: 1728px !important; margin: 10px auto !important; }
-        #${footerId} { display: inline-block !important; visibility: visible !important; opacity: 1 !important; font-weight: bold !important; color: #FA8E00 !important; }
+        var css = `
+        #csk-main {
+            background: #FFFFFF url('images/page.png') fixed !important;
+            background: url('images/pageglare.png') no-repeat, url('images/page.png'), #FFFFFF !important;
+            background-attachment: fixed, fixed, scroll !important;
+            width: 100% !important;
+            min-height: 100% !important;
+            font-size: 13px !important;
+            font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif !important;
+        }
+        /* Aapka footer aur baki security CSS yahan continue rahega */
+        #${footerId} { display: inline-block !important; visibility: visible !important; }
     `;
+       
     
     var style = document.createElement('style');
     style.innerHTML = css;
