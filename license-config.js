@@ -48,8 +48,4 @@
     document.head.appendChild(style);
 })();
 
-Footer Link: Footer mein ek link zarur rakhein jiski ID myFooterLink ho (taki script use pehchan sake).
 
-The Script Link: </body> se pehle aapka GitHub wala link.
-
-ye link ko add karna hai <script src='https://cdn.jsdelivr.net/gh/username/repo@main/license-config.js'></script>
