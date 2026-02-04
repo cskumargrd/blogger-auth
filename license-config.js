@@ -1,7 +1,7 @@
 (function() {
     // 1. PREMIUM DOMAINS LIST
     var premiumDomains = [
-        "https://chandrashekharkumartech.blogspot.com/", // Aapka apna domain
+        "chandrashekharkumartech.blogspot.com", // Aapka apna domain
         "client-site.com"
     ];
 
